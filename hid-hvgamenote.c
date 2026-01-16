@@ -70,21 +70,21 @@ static const __u8 havit_faulty_rdesc[] = {
 /*
  * we fix the report descriptor by setting byte 17 to 5
  */
-static __u8 *havit_report_fixup(struct hid_device *hdev, __u8 *rdesc,
+static const __u8 *havit_report_fixup(struct hid_device *hdev, __u8 *rdesc,
 				 unsigned int *rsize)
 {
 	switch (hdev->product) {
 	case USB_DEVICE_ID_HAVIT_GAMENOTE_MOUSE_C:
 		if (*rsize == HAVIT_GAMENOTE_MOUSE_ORIG_RDESC_LENGTH) {
 			hid_info(hdev, "fixing up Havit Mouse report descriptor\n");
-			rdesc = havit_faulty_rdesc;
+			rdesc = (const __u8 *)havit_faulty_rdesc;
 			*rsize = sizeof(havit_faulty_rdesc);
 		}
 		break;
 	case USB_DEVICE_ID_HAVIT_GAMENOTE_MOUSE_W:
 		if (*rsize == HAVIT_GAMENOTE_MOUSE_ORIG_RDESC_LENGTH) {
 			hid_info(hdev, "fixing up Havit Mouse report descriptor\n");
-			rdesc = havit_faulty_rdesc;
+			rdesc = (const __u8 *)havit_faulty_rdesc;
 			*rsize = sizeof(havit_faulty_rdesc);
 		}
 		break;
