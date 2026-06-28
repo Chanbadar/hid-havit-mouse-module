@@ -9,7 +9,7 @@ DKMS install was not needed, and was not tested!
     $ sudo apt install build-essential linux-headers-generic dkms
 ## Prerequisites (Arch Linux, Arch based distro)
     $ pacman -S linux-lts-headers dkms
-    $ pacman -S linux-headers dksm
+    $ pacman -S linux-headers dkms
     
 (If you use a non-generic kernel, you should install the headers for that. DKMS is optional.)
 ## Building
