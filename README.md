@@ -1,7 +1,7 @@
 # hid_hvgamenote
 Fixes Havit Mouse side buttons.
 
-This was build and tested on Arch Linux in kernel version: `**6.8.9-arch1-1**`
+This was build and tested on Arch Linux in kernel version: `**Linux 7.1.6-arch1-1**`
 
 DKMS install was not needed, and was not tested!
 
